@@ -17,37 +17,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJQ-Ab-iuf">
-                                <rect key="frame" x="114" y="134" width="147" height="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJQ-Ab-iuf">
+                                <rect key="frame" x="114" y="192" width="147" height="28"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="UUx-C1-aW2"/>
+                                    <constraint firstAttribute="height" constant="28" id="aUL-3q-Vvb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLAT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhU-Mf-ZUI">
-                                <rect key="frame" x="145" y="170" width="84" height="46"/>
+                                <rect key="frame" x="145" y="228" width="84" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Team DRYV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVE-Uf-c4j">
-                                <rect key="frame" x="130" y="224" width="115" height="21"/>
+                                <rect key="frame" x="130" y="282" width="115" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hf8-Ff-MX7">
+                                <rect key="frame" x="134" y="444" width="107" height="30"/>
+                                <state key="normal" title="Enter Flat"/>
+                                <connections>
+                                    <action selector="enterFlatAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Aoq-Uk-ZDj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="jJQ-Ab-iuf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7vV-Gj-PO5"/>
-                            <constraint firstItem="HhU-Mf-ZUI" firstAttribute="top" secondItem="jJQ-Ab-iuf" secondAttribute="bottom" constant="8" symbolic="YES" id="BMR-An-54H"/>
-                            <constraint firstItem="OVE-Uf-c4j" firstAttribute="centerX" secondItem="jJQ-Ab-iuf" secondAttribute="centerX" id="DqY-i5-bmK"/>
-                            <constraint firstItem="jJQ-Ab-iuf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="114" id="SA3-Wk-eB0"/>
-                            <constraint firstItem="jJQ-Ab-iuf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="114" id="SpC-ZW-xmU"/>
-                            <constraint firstItem="OVE-Uf-c4j" firstAttribute="centerX" secondItem="HhU-Mf-ZUI" secondAttribute="centerX" id="e8r-Rn-Aod"/>
-                            <constraint firstItem="OVE-Uf-c4j" firstAttribute="top" secondItem="HhU-Mf-ZUI" secondAttribute="bottom" constant="8" symbolic="YES" id="yj7-RK-roo"/>
+                            <constraint firstItem="hf8-Ff-MX7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="134" id="5rG-gI-rON"/>
+                            <constraint firstItem="hf8-Ff-MX7" firstAttribute="centerX" secondItem="OVE-Uf-c4j" secondAttribute="centerX" id="8Nf-lb-RM0"/>
+                            <constraint firstItem="OVE-Uf-c4j" firstAttribute="centerX" secondItem="HhU-Mf-ZUI" secondAttribute="centerX" id="EA4-Zp-ggl"/>
+                            <constraint firstItem="HhU-Mf-ZUI" firstAttribute="top" secondItem="jJQ-Ab-iuf" secondAttribute="bottom" constant="8" symbolic="YES" id="K5c-Is-cgT"/>
+                            <constraint firstItem="jJQ-Ab-iuf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="172" id="LTc-FD-36e"/>
+                            <constraint firstItem="OVE-Uf-c4j" firstAttribute="top" secondItem="HhU-Mf-ZUI" secondAttribute="bottom" constant="8" symbolic="YES" id="OFf-sH-NiR"/>
+                            <constraint firstItem="jJQ-Ab-iuf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QtD-rl-qUv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hf8-Ff-MX7" secondAttribute="bottom" constant="193" id="dE8-P3-zsH"/>
+                            <constraint firstItem="HhU-Mf-ZUI" firstAttribute="centerX" secondItem="jJQ-Ab-iuf" secondAttribute="centerX" id="qDv-fC-fHZ"/>
+                            <constraint firstItem="jJQ-Ab-iuf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="114" id="vRu-Jc-ZRV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -57,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7" y="62"/>
+            <point key="canvasLocation" x="-7.2000000000000002" y="61.619190404797607"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="s6R-fo-PBf">

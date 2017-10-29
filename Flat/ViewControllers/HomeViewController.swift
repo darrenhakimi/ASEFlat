@@ -11,20 +11,13 @@ import FirebaseAuth
 
 class HomeViewController: UIViewController {
 
-    override func viewWillAppear(_ animated: Bool) {
-        print("VIEWWILLAPPEAR")
+    @IBAction func enterFlatAction(_ sender: UIButton)
+    {
         let user = Auth.auth().currentUser
         
         if (user == nil)
         {
-            print("should perform segue")
-            performSegue(withIdentifier: "segueHomeToSignIn", sender: Any?.self)
-            self.performSegue(withIdentifier: "segueHomeToSignIn", sender: self)
-        }
-        else
-        {
-            print("USER IS VALID!!!")
-            print(user!)
+            self.performSegue(withIdentifier: "segueHomeToSignIn", sender: Any?.self)
         }
     }
     
