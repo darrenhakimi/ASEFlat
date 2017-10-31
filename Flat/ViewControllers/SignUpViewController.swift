@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SignUpViewController: UIViewController
 {
@@ -50,6 +51,16 @@ class SignUpViewController: UIViewController
         if segue.identifier == "segueSignUpToGuest"
         {
             //perform guest sign up
+            Auth.auth().createUser(withEmail: emailOutlet.text!, password: passwordOutlet.text!, completion: { (user, error) in
+                if user != nil
+                {
+                    DatabaseFunctions.guestSignUpRequest(user: user!, name: self.nameOutlet.text!, number: self.numberOutlet.text!, email: self.emailOutlet.text!)
+                }
+                else
+                {
+                    //sign up failed
+                }
+            })
         }
         else if segue.identifier == "segueToHostSignUp"
         {

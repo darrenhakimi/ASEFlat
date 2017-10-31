@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		2ABBBC02ECC12EEC0058BE74 /* Pods_FlatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1D20B1C9A377C48CE3E1B0 /* Pods_FlatTests.framework */; };
 		52B4B43D8D227B92B0A4A694 /* Pods_Flat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E20D12BFE24A9364C2CFBB8B /* Pods_Flat.framework */; };
+		95B1B0B91FA8C30000C60BA9 /* DatabaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B1B0B81FA8C30000C60BA9 /* DatabaseFunctions.swift */; };
+		95B1B0BB1FA8C34100C60BA9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B1B0BA1FA8C34100C60BA9 /* Constants.swift */; };
+		95B1B0BD1FA8C65900C60BA9 /* SignUpSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B1B0BC1FA8C65900C60BA9 /* SignUpSizeViewController.swift */; };
+		95B1B0BF1FA8C72600C60BA9 /* SignUpPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B1B0BE1FA8C72600C60BA9 /* SignUpPriceViewController.swift */; };
 		95B85E391FA2304300F25184 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B85E381FA2304300F25184 /* AppDelegate.swift */; };
 		95B85E3B1FA2304300F25184 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B85E3A1FA2304300F25184 /* HomeViewController.swift */; };
 		95B85E3E1FA2304300F25184 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95B85E3C1FA2304300F25184 /* Main.storyboard */; };
@@ -34,6 +38,10 @@
 /* Begin PBXFileReference section */
 		0804CF8680F33BD3BECD6AA1 /* Pods-FlatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlatTests/Pods-FlatTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2AE96DD836651632AEA724FA /* Pods-FlatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlatTests/Pods-FlatTests.release.xcconfig"; sourceTree = "<group>"; };
+		95B1B0B81FA8C30000C60BA9 /* DatabaseFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseFunctions.swift; sourceTree = "<group>"; };
+		95B1B0BA1FA8C34100C60BA9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		95B1B0BC1FA8C65900C60BA9 /* SignUpSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSizeViewController.swift; sourceTree = "<group>"; };
+		95B1B0BE1FA8C72600C60BA9 /* SignUpPriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPriceViewController.swift; sourceTree = "<group>"; };
 		95B85E351FA2304300F25184 /* Flat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95B85E381FA2304300F25184 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95B85E3A1FA2304300F25184 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +121,8 @@
 				95B85E411FA2304300F25184 /* LaunchScreen.storyboard */,
 				95B85E441FA2304300F25184 /* Info.plist */,
 				95B85E581FA232B900F25184 /* GoogleService-Info.plist */,
+				95B1B0B81FA8C30000C60BA9 /* DatabaseFunctions.swift */,
+				95B1B0BA1FA8C34100C60BA9 /* Constants.swift */,
 			);
 			path = Flat;
 			sourceTree = "<group>";
@@ -133,6 +143,8 @@
 				95DED31A1FA2EDA7001A62A4 /* SignInViewController.swift */,
 				95DED3181FA2ED78001A62A4 /* SignUpViewController.swift */,
 				95CAF99E1FA8289200EC84E5 /* SignUpLocationViewController.swift */,
+				95B1B0BC1FA8C65900C60BA9 /* SignUpSizeViewController.swift */,
+				95B1B0BE1FA8C72600C60BA9 /* SignUpPriceViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -352,8 +364,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				95DED31B1FA2EDA7001A62A4 /* SignInViewController.swift in Sources */,
+				95B1B0BD1FA8C65900C60BA9 /* SignUpSizeViewController.swift in Sources */,
 				95CAF99F1FA8289200EC84E5 /* SignUpLocationViewController.swift in Sources */,
+				95B1B0BF1FA8C72600C60BA9 /* SignUpPriceViewController.swift in Sources */,
+				95B1B0B91FA8C30000C60BA9 /* DatabaseFunctions.swift in Sources */,
 				95DED3191FA2ED78001A62A4 /* SignUpViewController.swift in Sources */,
+				95B1B0BB1FA8C34100C60BA9 /* Constants.swift in Sources */,
 				95B85E3B1FA2304300F25184 /* HomeViewController.swift in Sources */,
 				95B85E391FA2304300F25184 /* AppDelegate.swift in Sources */,
 			);

@@ -8,6 +8,7 @@ target 'Flat' do
   # Pods for Flat
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 
   target 'FlatTests' do
     inherit! :search_paths
