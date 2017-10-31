@@ -16,6 +16,7 @@
 		95B85E431FA2304300F25184 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95B85E411FA2304300F25184 /* LaunchScreen.storyboard */; };
 		95B85E4E1FA2304300F25184 /* FlatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B85E4D1FA2304300F25184 /* FlatTests.swift */; };
 		95B85E591FA232B900F25184 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95B85E581FA232B900F25184 /* GoogleService-Info.plist */; };
+		95CAF99F1FA8289200EC84E5 /* SignUpLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CAF99E1FA8289200EC84E5 /* SignUpLocationViewController.swift */; };
 		95DED3191FA2ED78001A62A4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DED3181FA2ED78001A62A4 /* SignUpViewController.swift */; };
 		95DED31B1FA2EDA7001A62A4 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DED31A1FA2EDA7001A62A4 /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,7 @@
 		95B85E4D1FA2304300F25184 /* FlatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatTests.swift; sourceTree = "<group>"; };
 		95B85E4F1FA2304300F25184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95B85E581FA232B900F25184 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		95CAF99E1FA8289200EC84E5 /* SignUpLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpLocationViewController.swift; sourceTree = "<group>"; };
 		95DED3181FA2ED78001A62A4 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		95DED31A1FA2EDA7001A62A4 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		AD1D20B1C9A377C48CE3E1B0 /* Pods_FlatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +132,7 @@
 				95B85E3A1FA2304300F25184 /* HomeViewController.swift */,
 				95DED31A1FA2EDA7001A62A4 /* SignInViewController.swift */,
 				95DED3181FA2ED78001A62A4 /* SignUpViewController.swift */,
+				95CAF99E1FA8289200EC84E5 /* SignUpLocationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95DED31B1FA2EDA7001A62A4 /* SignInViewController.swift in Sources */,
+				95CAF99F1FA8289200EC84E5 /* SignUpLocationViewController.swift in Sources */,
 				95DED3191FA2ED78001A62A4 /* SignUpViewController.swift in Sources */,
 				95B85E3B1FA2304300F25184 /* HomeViewController.swift in Sources */,
 				95B85E391FA2304300F25184 /* AppDelegate.swift in Sources */,
