@@ -45,11 +45,20 @@ class SignUpLocationViewController: UIViewController, UITableViewDataSource, UIT
             signUpSizeViewController.dataTuple = (name: self.dataTuple!.name, number: self.dataTuple!.number, email: self.dataTuple!.email, password: self.dataTuple!.password, location: self.location!)
         }
     }
+    
+    @objc func cancelAction()
+    {
+        self.dismiss(animated: true, completion: nil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.navigationItem.title = "Select Location"
+        
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelAction))
+        self.navigationItem.leftBarButtonItem = cancelButton
     }
 
     override func didReceiveMemoryWarning() {

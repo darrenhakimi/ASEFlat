@@ -21,9 +21,11 @@ class FlatTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testHomeViewController() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        //XCTAssert(<#T##expression: Bool##Bool#>)
     }
     
     func testPerformanceExample() {
