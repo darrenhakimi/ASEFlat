@@ -25,15 +25,22 @@ class GuestPriceViewController: UIViewController, UITableViewDataSource, UITable
         return cell
     }
     
-    //@objc func nextAction()
-    //{
-    //    self.performSegue(withIdentifier: "segueGuestSizeToGuestPrice", sender: Any?.self)
-    //}
+    @objc func signUpAction()
+    {
+        self.performSegue(withIdentifier: "segueGuestPriceToGuest", sender: Any?.self)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.price = options[indexPath.row]
+        let signUpButton = UIBarButtonItem(title: "Sign up", style: .plain, target: self, action: #selector(signUpAction))
+        self.navigationItem.rightBarButtonItem = signUpButton
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.navigationItem.title = "Select Price"
     }
 
     override func didReceiveMemoryWarning() {

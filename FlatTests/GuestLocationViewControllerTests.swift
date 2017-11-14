@@ -1,23 +1,19 @@
 //
-//  FlatTests.swift
+//  GuestLocationViewControllerTests.swift
 //  FlatTests
 //
-//  Created by Darren Hakimi on 10/26/17.
+//  Created by Darren Hakimi on 11/14/17.
 //  Copyright © 2017 Darren Hakimi. All rights reserved.
 //
 
 import XCTest
 @testable import Flat
 
-class FlatTests: XCTestCase {
-    
-    var homeViewController: HomeViewController!
+class GuestLocationViewControllerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        homeViewController = HomeViewController()
     }
     
     override func tearDown() {
@@ -25,16 +21,9 @@ class FlatTests: XCTestCase {
         super.tearDown()
     }
     
-    func testHomeViewController() {
+    func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        
-        //XCTAssert(<#T##expression: Bool##Bool#>)
-    }
-    
-    func testEnterFlatAction()
-    {
-        
     }
     
     func testPerformanceExample() {
@@ -45,4 +34,3 @@ class FlatTests: XCTestCase {
     }
     
 }
-

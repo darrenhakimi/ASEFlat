@@ -43,6 +43,7 @@ class GuestSizeViewController: UIViewController, UITableViewDataSource, UITableV
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.navigationItem.title = "Select Size"
     }
 
     override func didReceiveMemoryWarning() {
