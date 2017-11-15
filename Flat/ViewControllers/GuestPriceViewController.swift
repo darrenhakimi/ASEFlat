@@ -25,15 +25,15 @@ class GuestPriceViewController: UIViewController, UITableViewDataSource, UITable
         return cell
     }
     
-    @objc func signUpAction()
+    @objc func submitAction()
     {
         self.performSegue(withIdentifier: "segueGuestPriceToGuest", sender: Any?.self)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.price = options[indexPath.row]
-        let signUpButton = UIBarButtonItem(title: "Sign up", style: .plain, target: self, action: #selector(signUpAction))
-        self.navigationItem.rightBarButtonItem = signUpButton
+        let submitButton = UIBarButtonItem(title: "Submit", style: .plain, target: self, action: #selector(submitAction))
+        self.navigationItem.rightBarButtonItem = submitButton
     }
 
     override func viewDidLoad() {

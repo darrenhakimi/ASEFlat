@@ -11,26 +11,47 @@ import XCTest
 
 class SignUpSizeViewControllerTests: XCTestCase {
     
+    // MARK: Subject under test
+    var sut: SignUpSizeViewController!
+    var window: UIWindow!
+    
+    // MARK: Test lifecycle
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        window = UIWindow()
+        setupSignUpSizeViewController()
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        window = nil
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    // MARK: Test setup
+    func setupSignUpSizeViewController()
+    {
+        let bundle = Bundle.main
+        let storyboard = UIStoryboard(name: "Main", bundle: bundle)
+        sut = storyboard.instantiateViewController(withIdentifier: "SignUpSizeViewController") as! SignUpSizeViewController
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func loadView()
+    {
+        window.addSubview(sut.view)
+        RunLoop.current.run(until: Date())
+    }
+    
+    // MARK: Tests
+    
+    func testOptions()
+    {
+        XCTAssertTrue(sut.options.count > 0)
+    }
+    
+    func testSegues() {
+        let identifiers = TestsHelper.segues(ofViewController: sut)
+        XCTAssertEqual(identifiers.count, 1, "Segue count should equal one.")
+        XCTAssertTrue(identifiers.contains("segueSignUpSizeToSignUpPrice"), "Segue segueSignUpSizeToSignUpPrice should exist.")
     }
     
 }

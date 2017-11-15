@@ -21,6 +21,10 @@
 		95AF44051FBB64DF0011B0A6 /* GuestLocationViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AF44041FBB64DF0011B0A6 /* GuestLocationViewControllerTests.swift */; };
 		95AF44071FBB64EF0011B0A6 /* GuestSizeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AF44061FBB64EF0011B0A6 /* GuestSizeViewControllerTests.swift */; };
 		95AF44091FBB65B60011B0A6 /* GuestPriceViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AF44081FBB65B60011B0A6 /* GuestPriceViewControllerTests.swift */; };
+		95AF440B1FBBE0910011B0A6 /* TestsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AF440A1FBBE0910011B0A6 /* TestsHelper.swift */; };
+		95AF440D1FBBE31F0011B0A6 /* GuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AF440C1FBBE31F0011B0A6 /* GuestViewController.swift */; };
+		95AF440F1FBBE33D0011B0A6 /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AF440E1FBBE33D0011B0A6 /* HostViewController.swift */; };
+		95AF44111FBC253D0011B0A6 /* GuestViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AF44101FBC253D0011B0A6 /* GuestViewControllerTests.swift */; };
 		95B1B0B91FA8C30000C60BA9 /* DatabaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B1B0B81FA8C30000C60BA9 /* DatabaseFunctions.swift */; };
 		95B1B0BB1FA8C34100C60BA9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B1B0BA1FA8C34100C60BA9 /* Constants.swift */; };
 		95B1B0BD1FA8C65900C60BA9 /* SignUpSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B1B0BC1FA8C65900C60BA9 /* SignUpSizeViewController.swift */; };
@@ -30,7 +34,6 @@
 		95B85E3E1FA2304300F25184 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95B85E3C1FA2304300F25184 /* Main.storyboard */; };
 		95B85E401FA2304300F25184 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95B85E3F1FA2304300F25184 /* Assets.xcassets */; };
 		95B85E431FA2304300F25184 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95B85E411FA2304300F25184 /* LaunchScreen.storyboard */; };
-		95B85E4E1FA2304300F25184 /* FlatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B85E4D1FA2304300F25184 /* FlatTests.swift */; };
 		95B85E591FA232B900F25184 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95B85E581FA232B900F25184 /* GoogleService-Info.plist */; };
 		95CAF99F1FA8289200EC84E5 /* SignUpLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CAF99E1FA8289200EC84E5 /* SignUpLocationViewController.swift */; };
 		95DED3191FA2ED78001A62A4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DED3181FA2ED78001A62A4 /* SignUpViewController.swift */; };
@@ -62,6 +65,10 @@
 		95AF44041FBB64DF0011B0A6 /* GuestLocationViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestLocationViewControllerTests.swift; sourceTree = "<group>"; };
 		95AF44061FBB64EF0011B0A6 /* GuestSizeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestSizeViewControllerTests.swift; sourceTree = "<group>"; };
 		95AF44081FBB65B60011B0A6 /* GuestPriceViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestPriceViewControllerTests.swift; sourceTree = "<group>"; };
+		95AF440A1FBBE0910011B0A6 /* TestsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsHelper.swift; sourceTree = "<group>"; };
+		95AF440C1FBBE31F0011B0A6 /* GuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestViewController.swift; sourceTree = "<group>"; };
+		95AF440E1FBBE33D0011B0A6 /* HostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostViewController.swift; sourceTree = "<group>"; };
+		95AF44101FBC253D0011B0A6 /* GuestViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestViewControllerTests.swift; sourceTree = "<group>"; };
 		95B1B0B81FA8C30000C60BA9 /* DatabaseFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseFunctions.swift; sourceTree = "<group>"; };
 		95B1B0BA1FA8C34100C60BA9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		95B1B0BC1FA8C65900C60BA9 /* SignUpSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSizeViewController.swift; sourceTree = "<group>"; };
@@ -74,7 +81,6 @@
 		95B85E421FA2304300F25184 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95B85E441FA2304300F25184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95B85E491FA2304300F25184 /* FlatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		95B85E4D1FA2304300F25184 /* FlatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatTests.swift; sourceTree = "<group>"; };
 		95B85E4F1FA2304300F25184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95B85E581FA232B900F25184 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		95CAF99E1FA8289200EC84E5 /* SignUpLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpLocationViewController.swift; sourceTree = "<group>"; };
@@ -154,7 +160,6 @@
 		95B85E4C1FA2304300F25184 /* FlatTests */ = {
 			isa = PBXGroup;
 			children = (
-				95B85E4D1FA2304300F25184 /* FlatTests.swift */,
 				95B85E4F1FA2304300F25184 /* Info.plist */,
 				95AF43F81FBB64380011B0A6 /* HomeViewControllerTests.swift */,
 				95AF43FA1FBB646A0011B0A6 /* SignInViewControllerTests.swift */,
@@ -162,9 +167,11 @@
 				95AF43FE1FBB649D0011B0A6 /* SignUpLocationViewControllerTests.swift */,
 				95AF44001FBB64AC0011B0A6 /* SignUpSizeViewControllerTests.swift */,
 				95AF44021FBB64BC0011B0A6 /* SignUpPriceViewControllerTests.swift */,
+				95AF44101FBC253D0011B0A6 /* GuestViewControllerTests.swift */,
 				95AF44041FBB64DF0011B0A6 /* GuestLocationViewControllerTests.swift */,
 				95AF44061FBB64EF0011B0A6 /* GuestSizeViewControllerTests.swift */,
 				95AF44081FBB65B60011B0A6 /* GuestPriceViewControllerTests.swift */,
+				95AF440A1FBBE0910011B0A6 /* TestsHelper.swift */,
 			);
 			path = FlatTests;
 			sourceTree = "<group>";
@@ -178,9 +185,11 @@
 				95CAF99E1FA8289200EC84E5 /* SignUpLocationViewController.swift */,
 				95B1B0BC1FA8C65900C60BA9 /* SignUpSizeViewController.swift */,
 				95B1B0BE1FA8C72600C60BA9 /* SignUpPriceViewController.swift */,
+				95AF440C1FBBE31F0011B0A6 /* GuestViewController.swift */,
 				7EB730371FB4C3FD001764E1 /* GuestLocationViewController.swift */,
 				7EB730391FB4C70B001764E1 /* GuestSizeViewController.swift */,
 				7EB7303B1FB4CB06001764E1 /* GuestPriceViewController.swift */,
+				95AF440E1FBBE33D0011B0A6 /* HostViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -401,12 +410,14 @@
 			files = (
 				95DED31B1FA2EDA7001A62A4 /* SignInViewController.swift in Sources */,
 				95B1B0BD1FA8C65900C60BA9 /* SignUpSizeViewController.swift in Sources */,
+				95AF440F1FBBE33D0011B0A6 /* HostViewController.swift in Sources */,
 				95CAF99F1FA8289200EC84E5 /* SignUpLocationViewController.swift in Sources */,
 				95B1B0BF1FA8C72600C60BA9 /* SignUpPriceViewController.swift in Sources */,
 				95B1B0B91FA8C30000C60BA9 /* DatabaseFunctions.swift in Sources */,
 				95DED3191FA2ED78001A62A4 /* SignUpViewController.swift in Sources */,
 				7EB730381FB4C3FD001764E1 /* GuestLocationViewController.swift in Sources */,
 				7EB7303C1FB4CB06001764E1 /* GuestPriceViewController.swift in Sources */,
+				95AF440D1FBBE31F0011B0A6 /* GuestViewController.swift in Sources */,
 				7EB7303A1FB4C70B001764E1 /* GuestSizeViewController.swift in Sources */,
 				95B1B0BB1FA8C34100C60BA9 /* Constants.swift in Sources */,
 				95B85E3B1FA2304300F25184 /* HomeViewController.swift in Sources */,
@@ -421,9 +432,10 @@
 				95AF44071FBB64EF0011B0A6 /* GuestSizeViewControllerTests.swift in Sources */,
 				95AF43FF1FBB649D0011B0A6 /* SignUpLocationViewControllerTests.swift in Sources */,
 				95AF44011FBB64AC0011B0A6 /* SignUpSizeViewControllerTests.swift in Sources */,
-				95B85E4E1FA2304300F25184 /* FlatTests.swift in Sources */,
 				95AF43FB1FBB646A0011B0A6 /* SignInViewControllerTests.swift in Sources */,
 				95AF44091FBB65B60011B0A6 /* GuestPriceViewControllerTests.swift in Sources */,
+				95AF44111FBC253D0011B0A6 /* GuestViewControllerTests.swift in Sources */,
+				95AF440B1FBBE0910011B0A6 /* TestsHelper.swift in Sources */,
 				95AF44051FBB64DF0011B0A6 /* GuestLocationViewControllerTests.swift in Sources */,
 				95AF44031FBB64BC0011B0A6 /* SignUpPriceViewControllerTests.swift in Sources */,
 				95AF43FD1FBB64860011B0A6 /* SignUpViewControllerTests.swift in Sources */,

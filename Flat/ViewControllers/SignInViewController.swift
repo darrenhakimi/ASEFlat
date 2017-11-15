@@ -16,19 +16,62 @@ class SignInViewController: UIViewController {
     
     @IBOutlet weak var errorOutlet: UILabel!
     
+    func isValidEmail(testStr: String) -> Bool
+    {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: testStr)
+    }
+    
+    func isValidPassword(testStr: String) -> Bool
+    {
+        if testStr.count < 6
+        {
+            return false
+        }
+        return true
+    }
+    
     @IBAction func loginAction(_ sender: UIButton)
     {
-        if emailOutlet.text != "" && passwordOutlet.text != ""
+        if !isValidEmail(testStr: emailOutlet.text!)
+        {
+            self.errorOutlet.text = "Invalid email."
+            self.errorOutlet.isHidden = false
+        }
+        else if !isValidPassword(testStr: passwordOutlet.text!)
+        {
+            self.errorOutlet.text = "Invalid password."
+            self.errorOutlet.isHidden = false
+        }
+        else
         {
             Auth.auth().signIn(withEmail: emailOutlet.text!, password: passwordOutlet.text!, completion: { (user, error) in
                 if user != nil
                 {
                     //sign in successful
                     self.errorOutlet.isHidden = true
-                    self.performSegue(withIdentifier: "segueSignInToHome", sender: Any?.self)
+                    
+                    //determine if user is a guest or a host and segue accordingly
+                    let ref = Constants.refs.databaseUsers.child("\(user!.uid)")
+                    ref.observeSingleEvent(of: .value, with: { (snapshot) in
+                        let snapDict = snapshot.value as! [String:AnyObject]
+                        let userType = snapDict["isHost"] as! String
+                        
+                        if userType == "false"
+                        {
+                            self.performSegue(withIdentifier: "segueSignInToGuest", sender: Any?.self)
+                        }
+                        else if userType == "true"
+                        {
+                            self.performSegue(withIdentifier: "segueSignInToHost", sender: Any?.self)
+                        }
+                    })
                 }
                 else
                 {
+                    self.errorOutlet.text = "Invalid login."
                     self.errorOutlet.isHidden = false
                 }
             })
