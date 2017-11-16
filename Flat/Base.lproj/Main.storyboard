@@ -39,32 +39,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hf8-Ff-MX7">
-                                <rect key="frame" x="134" y="444" width="107" height="30"/>
+                                <rect key="frame" x="134" y="444" width="66" height="30"/>
                                 <state key="normal" title="Enter Flat"/>
                                 <connections>
                                     <action selector="enterFlatAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Aoq-Uk-ZDj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9c-s7-DzW">
-                                <rect key="frame" x="159" y="361" width="57" height="30"/>
-                                <state key="normal" title="Sign out"/>
-                                <connections>
-                                    <action selector="signOutAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7pJ-FA-DMi"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="OVE-Uf-c4j" firstAttribute="centerX" secondItem="p9c-s7-DzW" secondAttribute="centerX" id="3FZ-vf-8mR"/>
                             <constraint firstItem="HhU-Mf-ZUI" firstAttribute="centerX" secondItem="OVE-Uf-c4j" secondAttribute="centerX" id="3xH-Qn-Tp1"/>
                             <constraint firstItem="hf8-Ff-MX7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="134" id="F4q-8j-BVX"/>
-                            <constraint firstItem="hf8-Ff-MX7" firstAttribute="top" secondItem="p9c-s7-DzW" secondAttribute="bottom" constant="53" id="Fx1-Km-5Pq"/>
                             <constraint firstItem="jJQ-Ab-iuf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="114" id="HfT-ZH-yyp"/>
                             <constraint firstItem="HhU-Mf-ZUI" firstAttribute="top" secondItem="jJQ-Ab-iuf" secondAttribute="bottom" constant="8" symbolic="YES" id="SRx-o6-M8L"/>
                             <constraint firstItem="jJQ-Ab-iuf" firstAttribute="centerX" secondItem="HhU-Mf-ZUI" secondAttribute="centerX" id="Slr-vh-sji"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hf8-Ff-MX7" secondAttribute="bottom" constant="193" id="UO2-D7-bd7"/>
                             <constraint firstItem="OVE-Uf-c4j" firstAttribute="top" secondItem="HhU-Mf-ZUI" secondAttribute="bottom" constant="8" symbolic="YES" id="WPD-bH-mYx"/>
-                            <constraint firstItem="hf8-Ff-MX7" firstAttribute="centerX" secondItem="p9c-s7-DzW" secondAttribute="centerX" id="gDW-uE-HpB"/>
                             <constraint firstItem="jJQ-Ab-iuf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="172" id="oBw-Ou-ezK"/>
                             <constraint firstItem="jJQ-Ab-iuf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ykQ-sW-QMt"/>
                         </constraints>
@@ -321,6 +311,15 @@
                                     <segue destination="6g6-Ku-E7s" kind="presentation" identifier="segueGuestToSubmitRequest" id="2wm-YW-odr"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJH-2U-5BS">
+                                <rect key="frame" x="159" y="338" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign out"/>
+                                <connections>
+                                    <action selector="signOutAction:" destination="pOj-fO-wtV" eventType="touchUpInside" id="64f-qb-9gW"/>
+                                    <action selector="signOutAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zgu-h2-pPG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -329,6 +328,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="R3R-Ao-ngU"/>
                     </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="segueGuestToHome" id="jPu-Ng-92S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xLR-iu-b0j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -343,12 +345,57 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="VcI-SK-RJI" kind="relationship" relationship="rootViewController" id="e8d-gP-gzE"/>
+                        <segue destination="ZYS-eN-ics" kind="relationship" relationship="rootViewController" id="gPZ-uG-WtF"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7qe-A3-Tqd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1622" y="1943"/>
+        </scene>
+        <!--Guest Date View Controller-->
+        <scene sceneID="Tec-zD-6Un">
+            <objects>
+                <viewController storyboardIdentifier="GuestDateViewController" id="ZYS-eN-ics" customClass="GuestDateViewController" customModule="Flat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mFY-Qg-Gbh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Invalid check-out date." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vx-z0-mwH">
+                                <rect key="frame" x="100" y="166" width="175" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.056107677719999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Check-in Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nnk-2G-e2U">
+                                <rect key="frame" x="38" y="216" width="299" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Check-out Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Uf-zc-9j7">
+                                <rect key="frame" x="38" y="271" width="299" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="SZZ-ky-txz"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Yox-UV-AY5"/>
+                    <connections>
+                        <outlet property="checkInDateOutlet" destination="Nnk-2G-e2U" id="0YP-5N-Oya"/>
+                        <outlet property="checkOutDateOutlet" destination="5Uf-zc-9j7" id="ZWx-q6-Pi2"/>
+                        <outlet property="errorOutlet" destination="4Vx-z0-mwH" id="ubV-ac-uhc"/>
+                        <segue destination="VcI-SK-RJI" kind="show" identifier="segueGuestDateToGuestLocation" id="3jM-D6-DXb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="22O-km-Mxd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2614" y="1943"/>
         </scene>
         <!--Guest Location View Controller-->
         <scene sceneID="zIZ-e2-0JN">
@@ -397,7 +444,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jeg-mo-NSN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2613.5999999999999" y="1942.5787106446778"/>
+            <point key="canvasLocation" x="3654" y="1943"/>
         </scene>
         <!--Guest Size View Controller-->
         <scene sceneID="bTz-F6-0Ux">
@@ -445,7 +492,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jDZ-8B-5ej" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3653.5999999999999" y="1942.5787106446778"/>
+            <point key="canvasLocation" x="4694" y="1943"/>
         </scene>
         <!--Guest Price View Controller-->
         <scene sceneID="wvs-ud-Sz1">
@@ -493,7 +540,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kih-cU-ZUm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4685.6000000000004" y="1942.5787106446778"/>
+            <point key="canvasLocation" x="5726" y="1943"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LmW-Zy-G0i">
@@ -504,7 +551,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Khf-1M-St9" kind="relationship" relationship="rootViewController" id="Ncq-yB-sGs"/>
+                        <segue destination="Khf-1M-St9" kind="relationship" relationship="rootViewController" id="l39-Ss-TQt"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FUp-cQ-rpP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -669,7 +716,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9fe-lw-bmH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4685.6000000000004" y="984.55772113943033"/>
+            <point key="canvasLocation" x="4694" y="985"/>
         </scene>
         <!--Host View Controller-->
         <scene sceneID="xnq-Tm-oJX">
@@ -685,6 +732,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCb-A5-OU0">
+                                <rect key="frame" x="159" y="258" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign out"/>
+                                <connections>
+                                    <action selector="signOutAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2iA-Lh-NIS"/>
+                                    <action selector="signOutAction:" destination="GB2-qF-2Ea" eventType="touchUpInside" id="OmP-TW-kdb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -693,6 +749,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NRw-UC-szj"/>
                     </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="segueHostToHome" id="qBY-KZ-4pj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="trF-vW-Wrr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -700,8 +759,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="IIq-s8-rG4"/>
-        <segue reference="Xz0-sl-887"/>
+        <segue reference="vq5-kD-1WK"/>
+        <segue reference="qNF-e8-N04"/>
         <segue reference="dpH-yj-6Wo"/>
+        <segue reference="qBY-KZ-4pj"/>
     </inferredMetricsTieBreakers>
 </document>

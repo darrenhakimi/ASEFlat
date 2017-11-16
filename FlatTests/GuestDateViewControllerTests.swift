@@ -1,25 +1,25 @@
 //
-//  GuestViewControllerTests.swift
+//  GuestDateViewControllerTests.swift
 //  FlatTests
 //
-//  Created by Darren Hakimi on 11/15/17.
+//  Created by Darren Hakimi on 11/16/17.
 //  Copyright © 2017 Darren Hakimi. All rights reserved.
 //
 
 import XCTest
 @testable import Flat
 
-class GuestViewControllerTests: XCTestCase {
+class GuestDateViewControllerTests: XCTestCase {
     
     // MARK: Subject under test
-    var sut: GuestViewController!
+    var sut: GuestDateViewController!
     var window: UIWindow!
     
     // MARK: Test lifecycle
     override func setUp() {
         super.setUp()
         window = UIWindow()
-        setupGuestViewController()
+        setupGuestDateViewController()
     }
     
     override func tearDown() {
@@ -28,11 +28,11 @@ class GuestViewControllerTests: XCTestCase {
     }
     
     // MARK: Test setup
-    func setupGuestViewController()
+    func setupGuestDateViewController()
     {
         let bundle = Bundle.main
         let storyboard = UIStoryboard(name: "Main", bundle: bundle)
-        sut = storyboard.instantiateViewController(withIdentifier: "GuestViewController") as! GuestViewController
+        sut = storyboard.instantiateViewController(withIdentifier: "GuestDateViewController") as! GuestDateViewController
     }
     
     func loadView()
@@ -44,9 +44,8 @@ class GuestViewControllerTests: XCTestCase {
     // MARK: Tests
     func testSegues() {
         let identifiers = TestsHelper.segues(ofViewController: sut)
-        XCTAssertEqual(identifiers.count, 2, "Segue count should equal two.")
-        XCTAssertTrue(identifiers.contains("segueGuestToSubmitRequest"), "Segue segueGuestToSubmitRequest should exist.")
-        XCTAssertTrue(identifiers.contains("segueGuestToHome"), "Segue segueGuestToHome should exist.")
+        XCTAssertEqual(identifiers.count, 1, "Segue count should equal one.")
+        XCTAssertTrue(identifiers.contains("segueGuestDateToGuestLocation"), "Segue segueGuestDateToGuestLocation should exist.")
     }
     
 }

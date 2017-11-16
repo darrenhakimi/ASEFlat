@@ -11,11 +11,6 @@ import Firebase
 import FirebaseAuth
 
 class HomeViewController: UIViewController {
-
-    @IBAction func signOutAction(_ sender: UIButton)
-    {
-        try! Auth.auth().signOut()
-    }
     
     @IBAction func enterFlatAction(_ sender: UIButton)
     {

@@ -46,19 +46,11 @@ class GuestLocationViewController: UIViewController, UITableViewDataSource, UITa
         }
     }
     
-    @objc func cancelAction()
-    {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.navigationItem.title = "Select Location"
-        
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelAction))
-        self.navigationItem.leftBarButtonItem = cancelButton
     }
 
     override func didReceiveMemoryWarning() {

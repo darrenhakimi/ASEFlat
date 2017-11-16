@@ -7,9 +7,15 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class GuestViewController: UIViewController {
-
+    @IBAction func signOutAction(_ sender: UIButton)
+    {
+        try! Auth.auth().signOut()
+        performSegue(withIdentifier: "segueGuestToHome", sender: Any?.self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
