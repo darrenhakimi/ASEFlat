@@ -39,7 +39,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hf8-Ff-MX7">
-                                <rect key="frame" x="134" y="444" width="66" height="30"/>
+                                <rect key="frame" x="154" y="442" width="66" height="30"/>
                                 <state key="normal" title="Enter Flat"/>
                                 <connections>
                                     <action selector="enterFlatAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Aoq-Uk-ZDj"/>
@@ -49,13 +49,13 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="HhU-Mf-ZUI" firstAttribute="centerX" secondItem="OVE-Uf-c4j" secondAttribute="centerX" id="3xH-Qn-Tp1"/>
-                            <constraint firstItem="hf8-Ff-MX7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="134" id="F4q-8j-BVX"/>
                             <constraint firstItem="jJQ-Ab-iuf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="114" id="HfT-ZH-yyp"/>
+                            <constraint firstItem="hf8-Ff-MX7" firstAttribute="centerX" secondItem="OVE-Uf-c4j" secondAttribute="centerX" id="IUr-xO-sKg"/>
                             <constraint firstItem="HhU-Mf-ZUI" firstAttribute="top" secondItem="jJQ-Ab-iuf" secondAttribute="bottom" constant="8" symbolic="YES" id="SRx-o6-M8L"/>
                             <constraint firstItem="jJQ-Ab-iuf" firstAttribute="centerX" secondItem="HhU-Mf-ZUI" secondAttribute="centerX" id="Slr-vh-sji"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hf8-Ff-MX7" secondAttribute="bottom" constant="193" id="UO2-D7-bd7"/>
                             <constraint firstItem="OVE-Uf-c4j" firstAttribute="top" secondItem="HhU-Mf-ZUI" secondAttribute="bottom" constant="8" symbolic="YES" id="WPD-bH-mYx"/>
                             <constraint firstItem="jJQ-Ab-iuf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="172" id="oBw-Ou-ezK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hf8-Ff-MX7" secondAttribute="bottom" constant="195" id="xbt-sd-OcM"/>
                             <constraint firstItem="jJQ-Ab-iuf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ykQ-sW-QMt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -186,17 +186,6 @@
                                     <segue destination="nKT-Hl-Ibj" kind="show" identifier="segueSignUpToSignIn" id="5Qh-eo-Sat"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2k-59-c3d">
-                                <rect key="frame" x="161" y="460" width="53" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="OvX-wt-BNc"/>
-                                </constraints>
-                                <state key="normal" title="Sign up"/>
-                                <connections>
-                                    <action selector="loginAction:" destination="nKT-Hl-Ibj" eventType="touchUpInside" id="54s-JN-pMX"/>
-                                    <action selector="signUpNextAction:" destination="qNh-hb-YfZ" eventType="touchUpInside" id="oxF-6k-dHV"/>
-                                </connections>
-                            </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lx3-8i-9uG">
                                 <rect key="frame" x="137" y="168" width="101" height="29"/>
                                 <constraints>
@@ -242,6 +231,17 @@
                                 <color key="textColor" red="1" green="0.056107677719999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2k-59-c3d">
+                                <rect key="frame" x="161" y="460" width="53" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="OvX-wt-BNc"/>
+                                </constraints>
+                                <state key="normal" title="Sign up"/>
+                                <connections>
+                                    <action selector="loginAction:" destination="nKT-Hl-Ibj" eventType="touchUpInside" id="54s-JN-pMX"/>
+                                    <action selector="signUpNextAction:" destination="qNh-hb-YfZ" eventType="touchUpInside" id="oxF-6k-dHV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -759,9 +759,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vq5-kD-1WK"/>
-        <segue reference="qNF-e8-N04"/>
-        <segue reference="dpH-yj-6Wo"/>
+        <segue reference="6dB-9j-fUi"/>
+        <segue reference="bag-kz-n17"/>
+        <segue reference="5Qh-eo-Sat"/>
         <segue reference="qBY-KZ-4pj"/>
     </inferredMetricsTieBreakers>
 </document>
