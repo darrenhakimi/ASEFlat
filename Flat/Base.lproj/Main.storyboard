@@ -303,17 +303,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CmA-WS-kOe">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CmA-WS-kOe">
                                 <rect key="frame" x="133" y="190" width="109" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Submit Request"/>
                                 <connections>
                                     <segue destination="6g6-Ku-E7s" kind="presentation" identifier="segueGuestToSubmitRequest" id="2wm-YW-odr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJH-2U-5BS">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJH-2U-5BS">
                                 <rect key="frame" x="159" y="338" width="57" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign out"/>
                                 <connections>
                                     <action selector="signOutAction:" destination="pOj-fO-wtV" eventType="touchUpInside" id="64f-qb-9gW"/>
@@ -324,7 +322,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="BUF-UL-fUw" firstAttribute="top" secondItem="R3R-Ao-ngU" secondAttribute="top" constant="114" id="TN7-fE-3A2"/>
+                            <constraint firstItem="CmA-WS-kOe" firstAttribute="centerX" secondItem="BUF-UL-fUw" secondAttribute="centerX" id="TUT-G6-gyM"/>
                             <constraint firstItem="BUF-UL-fUw" firstAttribute="centerX" secondItem="TXY-Rb-cK9" secondAttribute="centerX" id="TrZ-NW-UXz"/>
+                            <constraint firstItem="R3R-Ao-ngU" firstAttribute="bottom" secondItem="yJH-2U-5BS" secondAttribute="bottom" constant="299" id="UeV-Xv-0Q9"/>
+                            <constraint firstItem="CmA-WS-kOe" firstAttribute="top" secondItem="BUF-UL-fUw" secondAttribute="bottom" constant="22" id="XGk-7C-hTA"/>
+                            <constraint firstItem="CmA-WS-kOe" firstAttribute="centerX" secondItem="yJH-2U-5BS" secondAttribute="centerX" id="ccj-ro-tlD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="R3R-Ao-ngU"/>
                     </view>
@@ -762,6 +764,6 @@
         <segue reference="6dB-9j-fUi"/>
         <segue reference="bag-kz-n17"/>
         <segue reference="5Qh-eo-Sat"/>
-        <segue reference="qBY-KZ-4pj"/>
+        <segue reference="jPu-Ng-92S"/>
     </inferredMetricsTieBreakers>
 </document>

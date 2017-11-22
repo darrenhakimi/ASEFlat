@@ -18,6 +18,7 @@ class GuestDateViewController: UIViewController
     
     let checkInDatePicker = UIDatePicker()
     let checkOutDatePicker = UIDatePicker()
+    let currentDate = Date()
     
     @objc func checkInDonePressed()
     {
@@ -35,6 +36,9 @@ class GuestDateViewController: UIViewController
     {
         //format for picker
         checkInDatePicker.datePickerMode = .date
+        checkInDatePicker.minimumDate = currentDate
+        let oneYearTime: TimeInterval = 365 * 24 * 60 * 60
+        checkInDatePicker.maximumDate = currentDate.addingTimeInterval(oneYearTime)
         
         //toolbar
         let toolbar = UIToolbar()
@@ -65,6 +69,9 @@ class GuestDateViewController: UIViewController
     {
         //format for picker
         checkOutDatePicker.datePickerMode = .date
+        checkOutDatePicker.minimumDate = currentDate
+        let oneYearTime: TimeInterval = 365 * 24 * 60 * 60
+        checkOutDatePicker.maximumDate = currentDate.addingTimeInterval(oneYearTime)
         
         //toolbar
         let toolbar = UIToolbar()
