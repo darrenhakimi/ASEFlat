@@ -11,41 +11,41 @@ import UIKit
 class GuestLocationViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var location: String?
-    
+    var dataTuple: (checkInDate: String, checkOutDate: String)?
+
     var options = ["Bushwick", "Crown Heights", "Dumbo", "Flatbush", "Greenpoint", "Williamsburg"]
-    
-    
+
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return options.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = options[indexPath.row]
-        
+
         return cell
     }
-    
-    @objc func nextAction()
-    {
+
+    @objc func nextAction() {
         self.performSegue(withIdentifier: "segueGuestLocationToGuestSize", sender: Any?.self)
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.location = options[indexPath.row]
         let nextButton = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(nextAction))
         self.navigationItem.rightBarButtonItem = nextButton
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        if segue.identifier == "segueGuestLocationToGuestSize"
-        {
-            let guestSizeViewController = segue.destination as! GuestSizeViewController
-            guestSizeViewController.location = self.location
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueGuestLocationToGuestSize" {
+            let guestSizeViewController = segue.destination as? GuestSizeViewController
+            guestSizeViewController?.dataTuple =
+                (checkInDate: self.dataTuple!.checkInDate, checkOutDate: self.dataTuple!.checkOutDate,
+                 location: self.location!)
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -57,5 +57,5 @@ class GuestLocationViewController: UIViewController, UITableViewDataSource, UITa
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
 }

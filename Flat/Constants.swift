@@ -9,10 +9,8 @@
 import Foundation
 import Firebase
 
-struct Constants
-{
-    struct refs
-    {
+struct Constants {
+    struct Refs {
         static let databaseRoot = Database.database().reference()
         static let databaseUsers = databaseRoot.child("users")
     }

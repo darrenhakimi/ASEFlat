@@ -54,7 +54,7 @@ class SignInViewController: UIViewController {
                     self.errorOutlet.isHidden = true
                     
                     //determine if user is a guest or a host and segue accordingly
-                    let ref = Constants.refs.databaseUsers.child("\(user!.uid)")
+                    let ref = Constants.Refs.databaseUsers.child("\(user!.uid)")
                     ref.observeSingleEvent(of: .value, with: { (snapshot) in
                         let snapDict = snapshot.value as! [String:AnyObject]
                         let userType = snapDict["isHost"] as! String
@@ -71,7 +71,7 @@ class SignInViewController: UIViewController {
                 }
                 else
                 {
-                    self.errorOutlet.text = "Invalid login."
+                    self.errorOutlet.text = "Invalid username/password."
                     self.errorOutlet.isHidden = false
                 }
             })

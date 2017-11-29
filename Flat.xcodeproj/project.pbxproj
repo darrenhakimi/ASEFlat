@@ -12,6 +12,7 @@
 		7EB730381FB4C3FD001764E1 /* GuestLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB730371FB4C3FD001764E1 /* GuestLocationViewController.swift */; };
 		7EB7303A1FB4C70B001764E1 /* GuestSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB730391FB4C70B001764E1 /* GuestSizeViewController.swift */; };
 		7EB7303C1FB4CB06001764E1 /* GuestPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB7303B1FB4CB06001764E1 /* GuestPriceViewController.swift */; };
+		9511CD801FCCCCCA00E443B4 /* HostRequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9511CD7F1FCCCCCA00E443B4 /* HostRequestsViewController.swift */; };
 		954EADA51FBD87580017F89B /* GuestDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954EADA41FBD87580017F89B /* GuestDateViewController.swift */; };
 		954EADA71FBD90830017F89B /* GuestDateViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954EADA61FBD90830017F89B /* GuestDateViewControllerTests.swift */; };
 		954EADA91FBD94DC0017F89B /* HostViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954EADA81FBD94DC0017F89B /* HostViewControllerTests.swift */; };
@@ -59,6 +60,7 @@
 		7EB730371FB4C3FD001764E1 /* GuestLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestLocationViewController.swift; sourceTree = "<group>"; };
 		7EB730391FB4C70B001764E1 /* GuestSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestSizeViewController.swift; sourceTree = "<group>"; };
 		7EB7303B1FB4CB06001764E1 /* GuestPriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestPriceViewController.swift; sourceTree = "<group>"; };
+		9511CD7F1FCCCCCA00E443B4 /* HostRequestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostRequestsViewController.swift; sourceTree = "<group>"; };
 		954EADA41FBD87580017F89B /* GuestDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestDateViewController.swift; sourceTree = "<group>"; };
 		954EADA61FBD90830017F89B /* GuestDateViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestDateViewControllerTests.swift; sourceTree = "<group>"; };
 		954EADA81FBD94DC0017F89B /* HostViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostViewControllerTests.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				7EB730391FB4C70B001764E1 /* GuestSizeViewController.swift */,
 				7EB7303B1FB4CB06001764E1 /* GuestPriceViewController.swift */,
 				95AF440E1FBBE33D0011B0A6 /* HostViewController.swift */,
+				9511CD7F1FCCCCCA00E443B4 /* HostRequestsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				95B85E331FA2304300F25184 /* Resources */,
 				2A3F6D2B8AC2005EFB0B8E5E /* [CP] Embed Pods Frameworks */,
 				D316C136A83174AF0B166BCE /* [CP] Copy Pods Resources */,
+				95E36C431FCE82930078EB61 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -395,6 +399,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlatTests/Pods-FlatTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		95E36C431FCE82930078EB61 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
 		D316C136A83174AF0B166BCE /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -425,6 +442,7 @@
 				95B1B0B91FA8C30000C60BA9 /* DatabaseFunctions.swift in Sources */,
 				95DED3191FA2ED78001A62A4 /* SignUpViewController.swift in Sources */,
 				954EADA51FBD87580017F89B /* GuestDateViewController.swift in Sources */,
+				9511CD801FCCCCCA00E443B4 /* HostRequestsViewController.swift in Sources */,
 				7EB730381FB4C3FD001764E1 /* GuestLocationViewController.swift in Sources */,
 				7EB7303C1FB4CB06001764E1 /* GuestPriceViewController.swift in Sources */,
 				95AF440D1FBBE31F0011B0A6 /* GuestViewController.swift in Sources */,

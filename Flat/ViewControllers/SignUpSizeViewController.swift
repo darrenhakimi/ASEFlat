@@ -40,8 +40,11 @@ class SignUpSizeViewController: UIViewController, UITableViewDataSource, UITable
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueSignUpSizeToSignUpPrice"
         {
-            let signUpPriceViewController = segue.destination as! SignUpPriceViewController
-            signUpPriceViewController.dataTuple = (name: self.dataTuple!.name, number: self.dataTuple!.number, email: self.dataTuple!.email, password: self.dataTuple!.password, location: self.dataTuple!.location, self.size!)
+            let signUpPriceViewController = segue.destination as? SignUpPriceViewController
+            signUpPriceViewController!.dataTuple =
+                (name: self.dataTuple!.name, number: self.dataTuple!.number,
+                 email: self.dataTuple!.email, password: self.dataTuple!.password,
+                 location: self.dataTuple!.location, self.size!)
         }
     }
     

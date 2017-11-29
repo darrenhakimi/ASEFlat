@@ -42,6 +42,26 @@ class GuestDateViewControllerTests: XCTestCase {
     }
     
     // MARK: Tests
+    func AreDatesValid()
+    {
+        let currentDate = Date()
+        let oneYearTime: TimeInterval = 365 * 24 * 60 * 60
+        
+        sut.checkInDateOutlet.text = ""
+        sut.checkOutDateOutlet.text = ""
+        XCTAssertFalse(sut.areDatesValid()) //check-in date is ""
+        
+        sut.checkInDateOutlet.text = "\(currentDate.addingTimeInterval(oneYearTime))"
+        XCTAssertFalse(sut.areDatesValid()) //check-out date is ""
+        
+        sut.checkOutDateOutlet.text = "\(currentDate)"
+        XCTAssertFalse(sut.areDatesValid()) //check-in date > check-out date
+        
+        sut.checkInDateOutlet.text = "\(currentDate)"
+        sut.checkOutDateOutlet.text = "\(currentDate.addingTimeInterval(oneYearTime))"
+        XCTAssertTrue(sut.areDatesValid())
+    }
+    
     func testSegues() {
         let identifiers = TestsHelper.segues(ofViewController: sut)
         XCTAssertEqual(identifiers.count, 1, "Segue count should equal one.")

@@ -10,9 +10,8 @@ import UIKit
 
 class GuestSizeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var location: String?
-    
     var size: String?
+    var dataTuple: (checkInDate: String, checkOutDate: String, location: String)?
     
     var options = ["1 Person", "2 Person", "3 Person", "4 Person", "5+ Person"]
     
@@ -34,9 +33,18 @@ class GuestSizeViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.location = options[indexPath.row]
+        self.size = options[indexPath.row]
         let nextButton = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(nextAction))
         self.navigationItem.rightBarButtonItem = nextButton
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "segueGuestSizeToGuestPrice"
+        {
+            let guestPriceViewController = segue.destination as? GuestPriceViewController
+            guestPriceViewController?.dataTuple = (checkInDate: self.dataTuple!.checkInDate, checkOutDate: self.dataTuple!.checkOutDate, location: self.dataTuple!.location, size: self.size!)
+        }
     }
 
     override func viewDidLoad() {
