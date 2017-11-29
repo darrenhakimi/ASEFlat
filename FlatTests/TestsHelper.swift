@@ -8,11 +8,11 @@
 
 import UIKit
 
-class TestsHelper
-{
+class TestsHelper {
     //https://stackoverflow.com/questions/32470169/how-to-do-unit-test-of-segue-in-ios-9
     class func segues(ofViewController viewController: UIViewController) -> [String] {
-        let identifiers = (viewController.value(forKey: "storyboardSegueTemplates") as? [AnyObject])?.flatMap({ $0.value(forKey: "identifier") as? String }) ?? []
+        let identifiers = (viewController.value(forKey: "storyboardSegueTemplates")
+            as? [AnyObject])?.flatMap({ $0.value(forKey: "identifier") as? String }) ?? []
         return identifiers
     }
 }

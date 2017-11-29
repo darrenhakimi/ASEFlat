@@ -10,47 +10,45 @@ import XCTest
 @testable import Flat
 
 class GuestPriceViewControllerTests: XCTestCase {
-    
+
     // MARK: Subject under test
     var sut: GuestPriceViewController!
     var window: UIWindow!
-    
+
     // MARK: Test lifecycle
     override func setUp() {
         super.setUp()
         window = UIWindow()
         setupGuestPriceViewController()
     }
-    
+
     override func tearDown() {
         window = nil
         super.tearDown()
     }
-    
+
     // MARK: Test setup
-    func setupGuestPriceViewController()
-    {
+    func setupGuestPriceViewController() {
         let bundle = Bundle.main
         let storyboard = UIStoryboard(name: "Main", bundle: bundle)
-        sut = storyboard.instantiateViewController(withIdentifier: "GuestPriceViewController") as! GuestPriceViewController
+        sut = storyboard.instantiateViewController(withIdentifier: "GuestPriceViewController")
+            as? GuestPriceViewController
     }
-    
-    func loadView()
-    {
+
+    func loadView() {
         window.addSubview(sut.view)
         RunLoop.current.run(until: Date())
     }
-    
+
     // MARK: Tests
-    func testOptions()
-    {
+    func testOptions() {
         XCTAssertTrue(sut.options.count > 0)
     }
-    
+
     func testSegues() {
         let identifiers = TestsHelper.segues(ofViewController: sut)
         XCTAssertEqual(identifiers.count, 1, "Segue count should equal one.")
         XCTAssertTrue(identifiers.contains("segueGuestPriceToGuest"), "Segue segueGuestPriceToGuest should exist.")
     }
-    
+
 }

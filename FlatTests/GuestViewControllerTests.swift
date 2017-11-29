@@ -10,43 +10,41 @@ import XCTest
 @testable import Flat
 
 class GuestViewControllerTests: XCTestCase {
-    
+
     // MARK: Subject under test
     var sut: GuestViewController!
     var window: UIWindow!
-    
+
     // MARK: Test lifecycle
     override func setUp() {
         super.setUp()
         window = UIWindow()
         setupGuestViewController()
     }
-    
+
     override func tearDown() {
         window = nil
         super.tearDown()
     }
-    
+
     // MARK: Test setup
-    func setupGuestViewController()
-    {
+    func setupGuestViewController() {
         let bundle = Bundle.main
         let storyboard = UIStoryboard(name: "Main", bundle: bundle)
-        sut = storyboard.instantiateViewController(withIdentifier: "GuestViewController") as! GuestViewController
+        sut = storyboard.instantiateViewController(withIdentifier: "GuestViewController") as? GuestViewController
     }
-    
-    func loadView()
-    {
+
+    func loadView() {
         window.addSubview(sut.view)
         RunLoop.current.run(until: Date())
     }
-    
+
     // MARK: Tests
     func testSegues() {
         let identifiers = TestsHelper.segues(ofViewController: sut)
         XCTAssertEqual(identifiers.count, 2, "Segue count should equal two.")
-        XCTAssertTrue(identifiers.contains("segueGuestToSubmitRequest"), "Segue segueGuestToSubmitRequest should exist.")
+        XCTAssertTrue(identifiers.contains("segueGuestToSubmitRequest"),
+                      "Segue segueGuestToSubmitRequest should exist.")
         XCTAssertTrue(identifiers.contains("segueGuestToHome"), "Segue segueGuestToHome should exist.")
     }
-    
 }

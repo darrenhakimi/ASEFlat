@@ -10,11 +10,11 @@ import UIKit
 
 class GuestLocationViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    var checkInDate: String?
+    var checkOutDate: String?
     var location: String?
-    var dataTuple: (checkInDate: String, checkOutDate: String)?
 
     var options = ["Bushwick", "Crown Heights", "Dumbo", "Flatbush", "Greenpoint", "Williamsburg"]
-
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return options.count
@@ -40,9 +40,9 @@ class GuestLocationViewController: UIViewController, UITableViewDataSource, UITa
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueGuestLocationToGuestSize" {
             let guestSizeViewController = segue.destination as? GuestSizeViewController
-            guestSizeViewController?.dataTuple =
-                (checkInDate: self.dataTuple!.checkInDate, checkOutDate: self.dataTuple!.checkOutDate,
-                 location: self.location!)
+            guestSizeViewController?.checkInDate = self.checkInDate!
+            guestSizeViewController?.checkOutDate = self.checkOutDate!
+            guestSizeViewController?.location = self.location!
         }
     }
 

@@ -119,11 +119,12 @@ class GuestDateViewController: UIViewController {
             self.performSegue(withIdentifier: "segueGuestDateToGuestLocation", sender: Any?.self)
         }
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueGuestDateToGuestLocation" {
             let guestLocationViewController = segue.destination as? GuestLocationViewController
-            guestLocationViewController?.dataTuple = (checkInDate: self.checkInDate!, checkOutDate: self.checkOutDate!)
+            guestLocationViewController?.checkInDate = self.checkInDate!
+            guestLocationViewController?.checkOutDate = self.checkOutDate!
         }
     }
 
