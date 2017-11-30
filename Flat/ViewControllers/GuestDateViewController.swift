@@ -25,8 +25,7 @@ class GuestDateViewController: UIViewController {
     @objc func checkInDonePressed() {
         //format date
         let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .short
-        dateFormatter.timeStyle = .none
+        dateFormatter.dateFormat = "MM/dd/yyyy"
 
         //place date in outlet
         checkInDateOutlet.text = dateFormatter.string(from: checkInDatePicker.date)
@@ -37,6 +36,8 @@ class GuestDateViewController: UIViewController {
         //format for picker
         checkInDatePicker.datePickerMode = .date
         checkInDatePicker.minimumDate = currentDate
+        let oneWeekTime: TimeInterval = 7 * 24 * 60 * 60
+        checkInDatePicker.minimumDate = currentDate.addingTimeInterval(oneWeekTime)
         let oneYearTime: TimeInterval = 365 * 24 * 60 * 60
         checkInDatePicker.maximumDate = currentDate.addingTimeInterval(oneYearTime)
 
@@ -56,8 +57,7 @@ class GuestDateViewController: UIViewController {
     @objc func checkOutDonePressed() {
         //format date
         let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .short
-        dateFormatter.timeStyle = .none
+        dateFormatter.dateFormat = "MM/dd/yyyy"
 
         //place date in outlet
         checkOutDateOutlet.text = dateFormatter.string(from: checkOutDatePicker.date)
@@ -68,6 +68,8 @@ class GuestDateViewController: UIViewController {
         //format for picker
         checkOutDatePicker.datePickerMode = .date
         checkOutDatePicker.minimumDate = currentDate
+        let oneWeekTime: TimeInterval = 7 * 24 * 60 * 60
+        checkOutDatePicker.minimumDate = currentDate.addingTimeInterval(oneWeekTime)
         let oneYearTime: TimeInterval = 365 * 24 * 60 * 60
         checkOutDatePicker.maximumDate = currentDate.addingTimeInterval(oneYearTime)
 
@@ -99,8 +101,7 @@ class GuestDateViewController: UIViewController {
         }
 
         let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .short
-        dateFormatter.timeStyle = .none
+        dateFormatter.dateFormat = "MM/dd/yyyy"
         let checkInDate = dateFormatter.date(from: checkInDateOutlet.text!)!
         let checkOutDate = dateFormatter.date(from: checkOutDateOutlet.text!)!
         if checkInDate > checkOutDate {

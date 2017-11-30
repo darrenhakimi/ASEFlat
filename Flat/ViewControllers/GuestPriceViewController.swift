@@ -12,11 +12,11 @@ import FirebaseAuth
 
 class GuestPriceViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    var price: String?
     var checkInDate: String?
     var checkOutDate: String?
     var location: String?
     var size: String?
+    var price: String?
 
     var options = ["$1 - $100", "$101 - $200", "$201 - $300", "$301 - $400", "$401 - $500", "$501+"]
 
@@ -54,8 +54,7 @@ class GuestPriceViewController: UIViewController, UITableViewDataSource, UITable
                             //matchFound = true
                             DatabaseFunctions.guestRequest(guestUID: user.uid, hostUID: hostUID!,
                                                            checkInDate: self.checkInDate!,
-                                                           checkOutDate: self.checkOutDate!,
-                                                           location: location!, size: size!, price: price!)
+                                                           checkOutDate: self.checkOutDate!)
                         }
                     }
                 }

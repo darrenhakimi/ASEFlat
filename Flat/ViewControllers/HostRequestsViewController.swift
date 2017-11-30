@@ -51,8 +51,17 @@ class HostRequestsViewController: UIViewController, UITableViewDataSource, UITab
             let email = snapDict!["email"] as? String
             let number = snapDict!["number"] as? String
 
-            DatabaseFunctions.hostInfoForGuest(currentDateTime: currentDateTime, guestUID: self.guestUID!,
-                                               hostUID: self.hostUID!, name: name!, email: email!, number: number!)
+            ref.child("requests").child(self.requestID!).observeSingleEvent(
+                of: .value, with: { (requestSnapshot) in
+                    let requestSnapDict = requestSnapshot.value as? [String: AnyObject]
+                    let checkInDate = requestSnapDict!["checkInDate"] as? String
+                    let checkOutDate = requestSnapDict!["checkOutDate"] as? String
+
+                    DatabaseFunctions.hostInfoForGuest(currentDateTime: currentDateTime, guestUID: self.guestUID!,
+                                                       hostUID: self.hostUID!, checkInDate: checkInDate!,
+                                                       checkOutDate: checkOutDate!, name: name!, email: email!,
+                                                       number: number!)
+                    })
         })
     }
 
@@ -60,6 +69,7 @@ class HostRequestsViewController: UIViewController, UITableViewDataSource, UITab
         let currentDateTime = DatabaseFunctions.getDateTime()
         self.getGuestInfoForHost(currentDateTime: currentDateTime)
         self.getHostInfoForGuest(currentDateTime: currentDateTime)
+        self.loadData()
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -72,27 +82,35 @@ class HostRequestsViewController: UIViewController, UITableViewDataSource, UITab
         self.navigationItem.rightBarButtonItem = approveButton
     }
 
-    override func viewWillAppear(_ animated: Bool) {
+    func loadData() {
+        options.removeAll()
         if let user = Auth.auth().currentUser {
             let ref = Constants.Refs.databaseUsers
             ref.child(user.uid).child("requests")
                 .queryOrderedByKey().observeSingleEvent(of: .value, with: { (snapshot) in
-                for snap in snapshot.children {
-                    let offerSnap = snap as? DataSnapshot
-                    let offerDict = offerSnap!.value as? [String: AnyObject]
-                    let checkInDate = offerDict!["checkInDate"] as? String
-                    let checkOutDate = offerDict!["checkOutDate"] as? String
-                    let guestUID = offerDict!["guestUID"] as? String
+                    for snap in snapshot.children {
+                        let offerSnap = snap as? DataSnapshot
+                        let offerDict = offerSnap!.value as? [String: AnyObject]
+                        let isApproved = offerDict!["isApproved"] as? String
+                        if isApproved == nil {
+                            let checkInDate = offerDict!["checkInDate"] as? String
+                            let checkOutDate = offerDict!["checkOutDate"] as? String
+                            let guestUID = offerDict!["guestUID"] as? String
 
-                    self.options.append((dates: "\(checkInDate!) - \(checkOutDate!)",
-                        guestUID: guestUID!, hostUID: user.uid, requestID: offerSnap!.key))
-                }
-                self.tableViewOutlet.reloadData()
-            })
+                            self.options.append((dates: "\(checkInDate!) - \(checkOutDate!)",
+                                guestUID: guestUID!, hostUID: user.uid, requestID: offerSnap!.key))
+                        }
+                    }
+                    self.tableViewOutlet.reloadData()
+                })
         }
         if self.options.count == 0 {
             //segue to no requests available at the moment, check back later
         }
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        loadData()
     }
 
     @objc func cancelAction() {

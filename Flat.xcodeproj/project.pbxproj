@@ -40,8 +40,12 @@
 		95B85E431FA2304300F25184 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95B85E411FA2304300F25184 /* LaunchScreen.storyboard */; };
 		95B85E591FA232B900F25184 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95B85E581FA232B900F25184 /* GoogleService-Info.plist */; };
 		95CAF99F1FA8289200EC84E5 /* SignUpLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CAF99E1FA8289200EC84E5 /* SignUpLocationViewController.swift */; };
+		95D8F9111FCFC8110041AAAB /* HostMatchesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8F9101FCFC8110041AAAB /* HostMatchesListViewController.swift */; };
+		95D8F9131FCFE8350041AAAB /* HostMatchInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8F9121FCFE8350041AAAB /* HostMatchInfoViewController.swift */; };
+		95D8F9151FCFE86D0041AAAB /* GuestMatchInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8F9141FCFE86D0041AAAB /* GuestMatchInfoViewController.swift */; };
 		95DED3191FA2ED78001A62A4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DED3181FA2ED78001A62A4 /* SignUpViewController.swift */; };
 		95DED31B1FA2EDA7001A62A4 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DED31A1FA2EDA7001A62A4 /* SignInViewController.swift */; };
+		95F15FB21FCF29E1006C1153 /* GuestMatchesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F15FB11FCF29E1006C1153 /* GuestMatchesListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,8 +96,12 @@
 		95B85E4F1FA2304300F25184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95B85E581FA232B900F25184 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		95CAF99E1FA8289200EC84E5 /* SignUpLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpLocationViewController.swift; sourceTree = "<group>"; };
+		95D8F9101FCFC8110041AAAB /* HostMatchesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostMatchesListViewController.swift; sourceTree = "<group>"; };
+		95D8F9121FCFE8350041AAAB /* HostMatchInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostMatchInfoViewController.swift; sourceTree = "<group>"; };
+		95D8F9141FCFE86D0041AAAB /* GuestMatchInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestMatchInfoViewController.swift; sourceTree = "<group>"; };
 		95DED3181FA2ED78001A62A4 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		95DED31A1FA2EDA7001A62A4 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		95F15FB11FCF29E1006C1153 /* GuestMatchesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestMatchesListViewController.swift; sourceTree = "<group>"; };
 		AD1D20B1C9A377C48CE3E1B0 /* Pods_FlatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC91A8B099C0BAF42FC88854 /* Pods-Flat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flat.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flat/Pods-Flat.release.xcconfig"; sourceTree = "<group>"; };
 		E20D12BFE24A9364C2CFBB8B /* Pods_Flat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,8 +208,12 @@
 				7EB730371FB4C3FD001764E1 /* GuestLocationViewController.swift */,
 				7EB730391FB4C70B001764E1 /* GuestSizeViewController.swift */,
 				7EB7303B1FB4CB06001764E1 /* GuestPriceViewController.swift */,
+				95F15FB11FCF29E1006C1153 /* GuestMatchesListViewController.swift */,
+				95D8F9141FCFE86D0041AAAB /* GuestMatchInfoViewController.swift */,
 				95AF440E1FBBE33D0011B0A6 /* HostViewController.swift */,
 				9511CD7F1FCCCCCA00E443B4 /* HostRequestsViewController.swift */,
+				95D8F9101FCFC8110041AAAB /* HostMatchesListViewController.swift */,
+				95D8F9121FCFE8350041AAAB /* HostMatchInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -435,7 +447,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				95DED31B1FA2EDA7001A62A4 /* SignInViewController.swift in Sources */,
+				95D8F9151FCFE86D0041AAAB /* GuestMatchInfoViewController.swift in Sources */,
 				95B1B0BD1FA8C65900C60BA9 /* SignUpSizeViewController.swift in Sources */,
+				95F15FB21FCF29E1006C1153 /* GuestMatchesListViewController.swift in Sources */,
 				95AF440F1FBBE33D0011B0A6 /* HostViewController.swift in Sources */,
 				95CAF99F1FA8289200EC84E5 /* SignUpLocationViewController.swift in Sources */,
 				95B1B0BF1FA8C72600C60BA9 /* SignUpPriceViewController.swift in Sources */,
@@ -447,8 +461,10 @@
 				7EB7303C1FB4CB06001764E1 /* GuestPriceViewController.swift in Sources */,
 				95AF440D1FBBE31F0011B0A6 /* GuestViewController.swift in Sources */,
 				7EB7303A1FB4C70B001764E1 /* GuestSizeViewController.swift in Sources */,
+				95D8F9131FCFE8350041AAAB /* HostMatchInfoViewController.swift in Sources */,
 				95B1B0BB1FA8C34100C60BA9 /* Constants.swift in Sources */,
 				95B85E3B1FA2304300F25184 /* HomeViewController.swift in Sources */,
+				95D8F9111FCFC8110041AAAB /* HostMatchesListViewController.swift in Sources */,
 				95B85E391FA2304300F25184 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
