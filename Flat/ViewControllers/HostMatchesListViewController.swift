@@ -35,10 +35,6 @@ class HostMatchesListViewController: UIViewController, UITableViewDataSource, UI
         return cell
     }
 
-    @objc func reserveAction() {
-        self.performSegue(withIdentifier: "segueHostMatchesListToHostMatchInfo", sender: Any?.self)
-    }
-
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         checkInDate = options[indexPath.row].checkInDate
         checkOutDate = options[indexPath.row].checkOutDate
@@ -46,9 +42,7 @@ class HostMatchesListViewController: UIViewController, UITableViewDataSource, UI
         email = options[indexPath.row].email
         number = options[indexPath.row].number
 
-        let reserveButton =
-            UIBarButtonItem(title: "Reserve", style: .plain, target: self, action: #selector(reserveAction))
-        self.navigationItem.rightBarButtonItem = reserveButton
+        self.performSegue(withIdentifier: "segueHostMatchesListToHostMatchInfo", sender: Any?.self)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

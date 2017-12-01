@@ -35,10 +35,6 @@ class GuestMatchesListViewController: UIViewController, UITableViewDataSource, U
         return cell
     }
 
-    @objc func reserveAction() {
-        self.performSegue(withIdentifier: "segueGuestMatchesListToGuestMatchInfo", sender: Any?.self)
-    }
-
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         checkInDate = options[indexPath.row].checkInDate
         checkOutDate = options[indexPath.row].checkOutDate
@@ -46,9 +42,7 @@ class GuestMatchesListViewController: UIViewController, UITableViewDataSource, U
         email = options[indexPath.row].email
         number = options[indexPath.row].number
 
-        let reserveButton =
-            UIBarButtonItem(title: "Reserve", style: .plain, target: self, action: #selector(reserveAction))
-        self.navigationItem.rightBarButtonItem = reserveButton
+        self.performSegue(withIdentifier: "segueGuestMatchesListToGuestMatchInfo", sender: Any?.self)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -93,7 +87,7 @@ class GuestMatchesListViewController: UIViewController, UITableViewDataSource, U
         }
     }
 
-    @objc func cancelAction() {
+    @objc func backAction() {
         self.dismiss(animated: true, completion: nil)
     }
 
@@ -103,9 +97,9 @@ class GuestMatchesListViewController: UIViewController, UITableViewDataSource, U
         // Do any additional setup after loading the view.
         self.navigationItem.title = "Select Offer"
 
-        let cancelButton =
-            UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelAction))
-        self.navigationItem.leftBarButtonItem = cancelButton
+        let backButton =
+            UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backAction))
+        self.navigationItem.leftBarButtonItem = backButton
     }
 
     override func didReceiveMemoryWarning() {

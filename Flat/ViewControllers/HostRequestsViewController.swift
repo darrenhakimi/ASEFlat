@@ -92,8 +92,10 @@ class HostRequestsViewController: UIViewController, UITableViewDataSource, UITab
                         let offerSnap = snap as? DataSnapshot
                         let offerDict = offerSnap!.value as? [String: AnyObject]
                         let isApproved = offerDict!["isApproved"] as? String
-                        if isApproved == nil {
-                            let checkInDate = offerDict!["checkInDate"] as? String
+                        let dateTime = offerDict!["dateTime"] as? String
+                        let checkInDate = offerDict!["checkInDate"] as? String
+                        if isApproved == nil &&
+                            DatabaseFunctions.isDateValid(dateString: dateTime!, checkInDateString: checkInDate!) {
                             let checkOutDate = offerDict!["checkOutDate"] as? String
                             let guestUID = offerDict!["guestUID"] as? String
 
