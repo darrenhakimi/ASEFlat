@@ -98,9 +98,18 @@ class HostRequestsViewController: UIViewController, UITableViewDataSource, UITab
                             DatabaseFunctions.isDateValid(dateString: dateTime!, checkInDateString: checkInDate!) {
                             let checkOutDate = offerDict!["checkOutDate"] as? String
                             let guestUID = offerDict!["guestUID"] as? String
+                            let dates = "\(checkInDate!) - \(checkOutDate!)"
+                            var match = false
 
-                            self.options.append((dates: "\(checkInDate!) - \(checkOutDate!)",
-                                guestUID: guestUID!, hostUID: user.uid, requestID: offerSnap!.key))
+                            for option in self.options {
+                                if option.dates == dates && option.guestUID == guestUID! && option.hostUID == user.uid {
+                                    match = true
+                                }
+                            }
+                            if !match {
+                                self.options.append((dates: dates, guestUID: guestUID!,
+                                                     hostUID: user.uid, requestID: offerSnap!.key))
+                            }
                         }
                     }
                     self.tableViewOutlet.reloadData()
