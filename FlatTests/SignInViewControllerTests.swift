@@ -20,6 +20,7 @@ class SignInViewControllerTests: XCTestCase {
         super.setUp()
         window = UIWindow()
         setupSignInViewController()
+        loadView()
     }
 
     override func tearDown() {
@@ -40,6 +41,32 @@ class SignInViewControllerTests: XCTestCase {
     }
 
     // MARK: Tests
+    func testViewController() {
+        XCTAssertNotNil(sut.view)
+    }
+
+    //applied this test in UI Testing
+    /*func testScheduleActionIsConnected() {
+        sut.loginAction(sut.loginButtonOutlet)
+        XCTAssertTrue(sut.errorOutlet.text! == "Invalid email.")
+
+        sut.emailOutlet.text = "g@g.com"
+        sut.loginAction(sut.loginButtonOutlet)
+        XCTAssertTrue(sut.errorOutlet.text! == "Invalid password.")
+
+        sut.passwordOutlet.text = "emailpasswordmismatch"
+        sut.loginAction(sut.loginButtonOutlet)
+        waitForExpectations(timeout: 3) { (_) in
+            XCTAssertTrue(self.sut.errorOutlet.text! == "Invalid username/password.")
+        }
+
+        sut.passwordOutlet.text = "123456"
+        sut.loginAction(sut.loginButtonOutlet)
+        waitForExpectations(timeout: 3) { (_) in
+            XCTAssertTrue(self.sut.errorOutlet.isHidden)
+        }
+    }*/
+
     func testEmail() {
         XCTAssertTrue(sut.isValidEmail(testStr: "darren.hakimi@columbia.edu"))
         XCTAssertFalse(sut.isValidEmail(testStr: ""))

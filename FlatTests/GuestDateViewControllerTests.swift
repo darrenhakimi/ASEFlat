@@ -41,6 +41,10 @@ class GuestDateViewControllerTests: XCTestCase {
     }
 
     // MARK: Tests
+    func testViewController() {
+        XCTAssertNotNil(sut.view)
+    }
+
     func areDatesValid() {
         let currentDate = Date()
         let oneYearTime: TimeInterval = 365 * 24 * 60 * 60

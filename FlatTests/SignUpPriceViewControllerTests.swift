@@ -41,6 +41,9 @@ class SignUpPriceViewControllerTests: XCTestCase {
     }
 
     // MARK: Tests
+    func testViewController() {
+        XCTAssertNotNil(sut.view)
+    }
 
     func testOptions() {
         XCTAssertTrue(sut.options.count > 0)

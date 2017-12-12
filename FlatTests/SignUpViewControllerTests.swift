@@ -41,6 +41,10 @@ class SignUpViewControllerTests: XCTestCase {
     }
 
     // MARK: Tests
+    func testViewController() {
+        XCTAssertNotNil(sut.view)
+    }
+
     func testNames() {
         XCTAssertTrue(sut.isValidName(testStr: "Darren"))
         XCTAssertTrue(sut.isValidName(testStr: "O'Connel"))

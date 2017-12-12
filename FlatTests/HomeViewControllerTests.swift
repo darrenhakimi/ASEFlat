@@ -40,6 +40,10 @@ class HomeViewControllerTests: XCTestCase {
     }
 
     // MARK: Tests
+    func testViewController() {
+        XCTAssertNotNil(sut.view)
+    }
+
     func testSegues() {
         let identifiers = TestsHelper.segues(ofViewController: sut)
         XCTAssertEqual(identifiers.count, 3, "Segue count should equal three.")

@@ -13,6 +13,8 @@
 		7EB7303A1FB4C70B001764E1 /* GuestSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB730391FB4C70B001764E1 /* GuestSizeViewController.swift */; };
 		7EB7303C1FB4CB06001764E1 /* GuestPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB7303B1FB4CB06001764E1 /* GuestPriceViewController.swift */; };
 		9511CD801FCCCCCA00E443B4 /* HostRequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9511CD7F1FCCCCCA00E443B4 /* HostRequestsViewController.swift */; };
+		952C0B9B1FDCD6BA00F53DB4 /* SignInViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952C0B9A1FDCD6BA00F53DB4 /* SignInViewControllerUITests.swift */; };
+		953A88251FDF4A3D00E3F148 /* FlatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A88241FDF4A3D00E3F148 /* FlatUITests.swift */; };
 		954EADA51FBD87580017F89B /* GuestDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954EADA41FBD87580017F89B /* GuestDateViewController.swift */; };
 		954EADA71FBD90830017F89B /* GuestDateViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954EADA61FBD90830017F89B /* GuestDateViewControllerTests.swift */; };
 		954EADA91FBD94DC0017F89B /* HostViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954EADA81FBD94DC0017F89B /* HostViewControllerTests.swift */; };
@@ -49,6 +51,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		953A88271FDF4A3D00E3F148 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95B85E2D1FA2304300F25184 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95B85E341FA2304300F25184;
+			remoteInfo = Flat;
+		};
 		95B85E4A1FA2304300F25184 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 95B85E2D1FA2304300F25184 /* Project object */;
@@ -65,6 +74,10 @@
 		7EB730391FB4C70B001764E1 /* GuestSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestSizeViewController.swift; sourceTree = "<group>"; };
 		7EB7303B1FB4CB06001764E1 /* GuestPriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestPriceViewController.swift; sourceTree = "<group>"; };
 		9511CD7F1FCCCCCA00E443B4 /* HostRequestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostRequestsViewController.swift; sourceTree = "<group>"; };
+		952C0B9A1FDCD6BA00F53DB4 /* SignInViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewControllerUITests.swift; sourceTree = "<group>"; };
+		953A88221FDF4A3D00E3F148 /* FlatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		953A88241FDF4A3D00E3F148 /* FlatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatUITests.swift; sourceTree = "<group>"; };
+		953A88261FDF4A3D00E3F148 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		954EADA41FBD87580017F89B /* GuestDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestDateViewController.swift; sourceTree = "<group>"; };
 		954EADA61FBD90830017F89B /* GuestDateViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestDateViewControllerTests.swift; sourceTree = "<group>"; };
 		954EADA81FBD94DC0017F89B /* HostViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostViewControllerTests.swift; sourceTree = "<group>"; };
@@ -109,6 +122,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		953A881F1FDF4A3D00E3F148 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		95B85E321FA2304300F25184 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -137,11 +157,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		953A88231FDF4A3D00E3F148 /* FlatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				953A88241FDF4A3D00E3F148 /* FlatUITests.swift */,
+				953A88261FDF4A3D00E3F148 /* Info.plist */,
+			);
+			path = FlatUITests;
+			sourceTree = "<group>";
+		};
 		95B85E2C1FA2304200F25184 = {
 			isa = PBXGroup;
 			children = (
 				95B85E371FA2304300F25184 /* Flat */,
 				95B85E4C1FA2304300F25184 /* FlatTests */,
+				953A88231FDF4A3D00E3F148 /* FlatUITests */,
 				95B85E361FA2304300F25184 /* Products */,
 				F8D9DE8C1BA73EC17997EE28 /* Pods */,
 				32B55009A3ADCBBE9EFC6B4C /* Frameworks */,
@@ -153,6 +183,7 @@
 			children = (
 				95B85E351FA2304300F25184 /* Flat.app */,
 				95B85E491FA2304300F25184 /* FlatTests.xctest */,
+				953A88221FDF4A3D00E3F148 /* FlatUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,6 +221,7 @@
 				95AF44081FBB65B60011B0A6 /* GuestPriceViewControllerTests.swift */,
 				954EADA81FBD94DC0017F89B /* HostViewControllerTests.swift */,
 				95AF440A1FBBE0910011B0A6 /* TestsHelper.swift */,
+				952C0B9A1FDCD6BA00F53DB4 /* SignInViewControllerUITests.swift */,
 			);
 			path = FlatTests;
 			sourceTree = "<group>";
@@ -232,6 +264,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		953A88211FDF4A3D00E3F148 /* FlatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 953A88291FDF4A3D00E3F148 /* Build configuration list for PBXNativeTarget "FlatUITests" */;
+			buildPhases = (
+				953A881E1FDF4A3D00E3F148 /* Sources */,
+				953A881F1FDF4A3D00E3F148 /* Frameworks */,
+				953A88201FDF4A3D00E3F148 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				953A88281FDF4A3D00E3F148 /* PBXTargetDependency */,
+			);
+			name = FlatUITests;
+			productName = FlatUITests;
+			productReference = 953A88221FDF4A3D00E3F148 /* FlatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		95B85E341FA2304300F25184 /* Flat */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 95B85E521FA2304300F25184 /* Build configuration list for PBXNativeTarget "Flat" */;
@@ -280,10 +330,15 @@
 		95B85E2D1FA2304300F25184 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0900;
+				LastSwiftUpdateCheck = 0910;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Darren Hakimi";
 				TargetAttributes = {
+					953A88211FDF4A3D00E3F148 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 95B85E341FA2304300F25184;
+					};
 					95B85E341FA2304300F25184 = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
@@ -310,11 +365,19 @@
 			targets = (
 				95B85E341FA2304300F25184 /* Flat */,
 				95B85E481FA2304300F25184 /* FlatTests */,
+				953A88211FDF4A3D00E3F148 /* FlatUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		953A88201FDF4A3D00E3F148 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		95B85E331FA2304300F25184 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -442,6 +505,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		953A881E1FDF4A3D00E3F148 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				953A88251FDF4A3D00E3F148 /* FlatUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		95B85E311FA2304300F25184 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -479,6 +550,7 @@
 				95AF44011FBB64AC0011B0A6 /* SignUpSizeViewControllerTests.swift in Sources */,
 				95AF43FB1FBB646A0011B0A6 /* SignInViewControllerTests.swift in Sources */,
 				95AF44091FBB65B60011B0A6 /* GuestPriceViewControllerTests.swift in Sources */,
+				952C0B9B1FDCD6BA00F53DB4 /* SignInViewControllerUITests.swift in Sources */,
 				95AF44111FBC253D0011B0A6 /* GuestViewControllerTests.swift in Sources */,
 				95AF440B1FBBE0910011B0A6 /* TestsHelper.swift in Sources */,
 				95AF44051FBB64DF0011B0A6 /* GuestLocationViewControllerTests.swift in Sources */,
@@ -492,6 +564,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		953A88281FDF4A3D00E3F148 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95B85E341FA2304300F25184 /* Flat */;
+			targetProxy = 953A88271FDF4A3D00E3F148 /* PBXContainerItemProxy */;
+		};
 		95B85E4B1FA2304300F25184 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 95B85E341FA2304300F25184 /* Flat */;
@@ -519,6 +596,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		953A882A1FDF4A3D00E3F148 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UEKD4E6MBF;
+				INFOPLIST_FILE = FlatUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DarrenHakimi.FlatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Flat;
+			};
+			name = Debug;
+		};
+		953A882B1FDF4A3D00E3F148 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UEKD4E6MBF;
+				INFOPLIST_FILE = FlatUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DarrenHakimi.FlatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Flat;
+			};
+			name = Release;
+		};
 		95B85E501FA2304300F25184 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -697,6 +806,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		953A88291FDF4A3D00E3F148 /* Build configuration list for PBXNativeTarget "FlatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				953A882A1FDF4A3D00E3F148 /* Debug */,
+				953A882B1FDF4A3D00E3F148 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		95B85E301FA2304300F25184 /* Build configuration list for PBXProject "Flat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

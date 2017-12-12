@@ -142,6 +142,7 @@
                     <connections>
                         <outlet property="emailOutlet" destination="v2u-HI-aD8" id="J2u-hP-EZM"/>
                         <outlet property="errorOutlet" destination="2JY-Rv-NAF" id="F6Q-Du-cWx"/>
+                        <outlet property="loginButtonOutlet" destination="Mmt-63-ZW3" id="VU8-oI-qq2"/>
                         <outlet property="passwordOutlet" destination="DHu-zr-l5N" id="3wH-93-lvz"/>
                         <segue destination="pOj-fO-wtV" kind="show" identifier="segueSignInToGuest" id="Xz0-sl-887"/>
                         <segue destination="GB2-qF-2Ea" kind="show" identifier="segueSignInToHost" id="IIq-s8-rG4"/>
@@ -1124,8 +1125,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vq5-kD-1WK"/>
-        <segue reference="VA2-Wz-mOl"/>
+        <segue reference="3DC-cW-Lfu"/>
+        <segue reference="IIq-s8-rG4"/>
+        <segue reference="Xz0-sl-887"/>
         <segue reference="5Qh-eo-Sat"/>
         <segue reference="qBY-KZ-4pj"/>
     </inferredMetricsTieBreakers>
