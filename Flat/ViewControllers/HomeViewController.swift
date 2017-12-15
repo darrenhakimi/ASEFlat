@@ -13,7 +13,6 @@ import FirebaseAuth
 class HomeViewController: UIViewController {
 
     @IBAction func enterFlatAction(_ sender: UIButton) {
-        //try? Auth.auth().signOut()
         if let user = Auth.auth().currentUser {
             let ref = Constants.Refs.databaseUsers.child("\(user.uid)")
             ref.observeSingleEvent(of: .value, with: { (snapshot) in
@@ -31,6 +30,9 @@ class HomeViewController: UIViewController {
         }
     }
 
+    @IBAction func logoutAction(_ sender: UIButton) {
+        try? Auth.auth().signOut()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

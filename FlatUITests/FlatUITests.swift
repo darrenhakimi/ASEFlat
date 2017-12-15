@@ -127,14 +127,14 @@ class FlatUITests: XCTestCase {
         app.buttons["Requests"].tap()
 
         let tablesQuery = app.tables
-        tablesQuery.cells.element(boundBy: 0).tap()
+        tablesQuery.cells.element(boundBy: (tablesQuery.cells.count - 1)).tap()
 
         let selectDatesNavigationBar = app.navigationBars["Select Dates"]
         let approveButton = selectDatesNavigationBar.buttons["Approve"]
         approveButton.tap()
         selectDatesNavigationBar.buttons["Cancel"].tap()
         app.buttons["Matches"].tap()
-        tablesQuery.cells.element(boundBy: 0).tap()
+        tablesQuery.cells.element(boundBy: (tablesQuery.cells.count - 1)).tap()
         app.navigationBars["Guest Info"].buttons["Select Offer"].tap()
         app.navigationBars["Select Offer"].buttons["Cancel"].tap()
         app.buttons["Sign out"].tap()
@@ -166,7 +166,7 @@ class FlatUITests: XCTestCase {
         matchesButton.tap()
 
         let tablesQuery = app.tables
-        tablesQuery.cells.element(boundBy: 0).tap()
+        tablesQuery.cells.element(boundBy: (tablesQuery.cells.count - 1)).tap()
 
         app.navigationBars["Host Info"].buttons["Select Offer"].tap()
         app.navigationBars["Select Offer"].buttons["Back"].tap()
