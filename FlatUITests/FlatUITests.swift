@@ -36,6 +36,9 @@ class FlatUITests: XCTestCase {
     }
 
     func testALogin() {
+        let logoutButton = app.buttons["Logout"]
+        logoutButton.tap()
+
         let enterFlatButton = app.buttons["Enter Flat"]
         enterFlatButton.tap()
 
