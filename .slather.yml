@@ -1,9 +1,9 @@
-ci_service: travis_ci
-ci_access_token: coveralltoken
 coverage_service: coveralls
-xcodeproj: Flat.xcodeproj
+xcodeproj: ./Flat.xcodeproj
+workspace: ./Flat.xcworkspace
+scheme: CIScheme
 source_directory: Flat
+output_directory: ./coverage
 ignore:
   - FlatTests/*
   - FlatUITests/*
-  - Pods/*
